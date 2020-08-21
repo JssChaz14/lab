@@ -25,7 +25,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { HomeComponent } from './components/shared/home/home.component'
+import { HomeComponent } from './components/shared/home/home.component';
+import { MaestrosComponent } from './components/maestros/maestros/maestros.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HomeComponent } from './components/shared/home/home.component'
     ActividadesComponent,
     CrearActividadComponent,
     ModificarActividadComponent,
-    HomeComponent
+    HomeComponent,
+    MaestrosComponent
   ],
   imports: [
     BrowserModule,

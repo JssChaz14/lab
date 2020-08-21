@@ -1,1 +1,103 @@
-<p>home works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Registrar Entrada</h5>
+                <small class="card-text">Registro el uso del laboratorio fuera de clase o practica</small>
+                <hr>
+                <a [routerLink]="['/asistencia-registro']" routerLinkActive="router-link-active" class="btn btn-outline-primary">Registrar</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ver horario</h5>
+                <small class="card-text">Horario con sus respectivas clases, maestros y disponibilidad </small>
+                <hr>
+                <a href="#" class="btn btn-outline-primary">Consultar</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Reservar laboratorio</h5>
+                <small class="card-text">Apartar el laboratorio en un horario especifico</small>
+                <hr>
+                <a href="#" class="btn btn-outline-success btn-block">Reservar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<hr>
+<div class="row mt-2">
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-info btn-outline">Ver entradas</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-info btn-outline">Ver horario</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-info btn-outline">Ver maestros</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-info btn-outline">Ver practicas</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-warning btn-outline">Ver inventario</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-warning btn-outline">Ver actividades</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-warning btn-outline">Ver enlaces</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <a [routerLink]="['/asistencias']" class="btn btn-block btn-outline-warning">Reportes</a>
+            </div>
+        </div>
+    </div>
+
+</div>

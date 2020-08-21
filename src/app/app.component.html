@@ -1,3 +1,18 @@
-<router-outlet>
-
-</router-outlet>
+<div class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md sticky-top bg-light">
+        <a class="navbar-brand" href="#">
+            <h1 class="navbar-brand mb-0"> Laboratorio IGEM</h1>
+        </a>
+        <!-- <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link">Item 1</a></li>
+        </ul> -->
+    </nav>
+    <div class="d-flex flex-column flex-grow-1">
+        <div class="h-100 flex-grow-1 p-5 align-self-center d-flex align-items-center">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="text-center text-uppercase text-white bg-dark p-1">
+            Instituto Tecnológico Superior de Huetamo - 2020
+        </div>
+    </div>
+</div>

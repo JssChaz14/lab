@@ -8,6 +8,7 @@ import { AsistenciaComponent } from './components/laboratorio/asistencia/asisten
 
 import { CrearActividadComponent } from './components/laboratorista/crear-actividad/crear-actividad.component';
 import { ActividadesComponent } from './components/laboratorista/actividades/actividades.component';
+import { MaestrosComponent } from './components/maestros/maestros/maestros.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'asistencias', component: AsistenciaComponent },
   { path: 'asistencia-registro', component: RegistroComponent },
 
+  // Maestros
+  { path: 'maestros', component: MaestrosComponent },
 
   // Laboratorista
   { path: 'actividades', component: ActividadesComponent },

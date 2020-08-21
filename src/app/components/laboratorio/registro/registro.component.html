@@ -1,1 +1,45 @@
-<p>registro works!</p>
+<h2>Registrar entrada</h2>
+<hr>
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="ncontrol">Número de control</label>
+            <input type="number" class="form-control" placeholder="Número de control" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputState">Carrera</label>
+            <select id="inputState" class="form-control">
+                <option selected>Carrera</option>
+                <option>IGEM</option>
+                <option>IING</option>
+                <option>IIAL</option>
+                <option>ISIC</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputState">Actividad</label>
+            <select id="inputState" class="form-control">
+                <option>Clase</option>
+                <option>Practica</option>
+                <option>Uso general</option>
+                <option>Otro</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="equipo">Equipo</label>
+            <input type="text" class="form-control" placeholder="Equipo 10">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="duracion">Duración <small>min</small></label>
+            <input type="text" class="form-control" placeholder="10 min">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>

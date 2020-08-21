@@ -5,18 +5,17 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class LaboratorioService {
+export class MaestrosService {
 
   constructor(
     private afs: AngularFirestore
   ) { }
 
-  asistenciaCrear (record) {
-    return this.afs.collection('Students').add(record);
+  maestroAgregar (record) {
+    return this.afs.collection('maestros').add(record);
   }
 
-  asistencias() {
-    return this.afs.collection('asistencia').snapshotChanges();
+  maestrosVer() {
+    return this.afs.collection('maestros').snapshotChanges();
   }
-
 }

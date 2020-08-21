@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBjjTP1s_R4-5wsotIR7iw_8Q5ecyC51U4",
-    authDomain: "laboratorio-tec.firebaseapp.com",
-    databaseURL: "https://laboratorio-tec.firebaseio.com",
-    projectId: "laboratorio-tec",
-    storageBucket: "laboratorio-tec.appspot.com",
-    messagingSenderId: "454007620308",
-    appId: "1:454007620308:web:f785e8b1cadbac9aab7141"
+    apiKey: "AIzaSyDvZCli9A2-VN81CC_NBG2KC6NE5VNQwB0",
+    authDomain: "bitacora-38545.firebaseapp.com",
+    databaseURL: "https://bitacora-38545.firebaseio.com",
+    projectId: "bitacora-38545",
+    storageBucket: "bitacora-38545.appspot.com",
+    messagingSenderId: "160261348891",
+    appId: "1:160261348891:web:18e56d2b9c44aeeda422be"
   }
 };
 

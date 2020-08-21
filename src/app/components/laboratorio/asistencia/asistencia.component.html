@@ -1,11 +1,24 @@
-<p>asistencia works!</p>
-
-
-<ul>
-    <li *ngFor="let item of asistencias  | async">
-        --> {{ item | json }}
-    </li>
-</ul>
-
+<h2>Lista de registros</h2>
 
 <hr>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">N. Control</th>
+            <th scope="col">Carrera</th>
+            <th scope="col">Actividad</th>
+            <th scope="col">Fecha</th>
+            <th>Equipo - duración</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of asistencias  | async">
+            <th scope="row">{{item.ncontrol}}</th>
+            <td>{{item.carrera}}</td>
+            <td>{{item.actividad}}</td>
+            <td><small>{{item.fecha | date}}</small></td>
+            <td>{{item.equipo}} - {{item.duracion}} <small>(min)</small> </td>
+        </tr>
+    </tbody>
+</table>
