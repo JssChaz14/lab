@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { FormsModule } from '@angular/forms';
+
 import { AsistenciaComponent } from './components/laboratorio/asistencia/asistencia.component';
 import { RegistroComponent } from './components/laboratorio/registro/registro.component';
 import { InvetarioComponent } from './components/laboratorio/invetario/invetario.component';
@@ -17,6 +20,12 @@ import { ListaComponent } from './components/alumnos/lista/lista.component';
 import { ActividadesComponent } from './components/laboratorista/actividades/actividades.component';
 import { CrearActividadComponent } from './components/laboratorista/crear-actividad/crear-actividad.component';
 import { ModificarActividadComponent } from './components/laboratorista/modificar-actividad/modificar-actividad.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HomeComponent } from './components/shared/home/home.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +43,17 @@ import { ModificarActividadComponent } from './components/laboratorista/modifica
     ListaComponent,
     ActividadesComponent,
     CrearActividadComponent,
-    ModificarActividadComponent
+    ModificarActividadComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

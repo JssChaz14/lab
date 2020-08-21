@@ -1,1 +1,8 @@
 <p>asistencia works!</p>
+
+
+<ul>
+    <li *ngFor="let item of actividades | async">
+        {{ item.descripcion }}
+    </li>
+</ul>
