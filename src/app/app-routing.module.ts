@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { HomeComponent } from './components/shared/home/home.component';
+
+import { RegistroComponent } from './components/laboratorio/registro/registro.component';
 import { AsistenciaComponent } from './components/laboratorio/asistencia/asistencia.component';
+
 import { CrearActividadComponent } from './components/laboratorista/crear-actividad/crear-actividad.component';
 import { ActividadesComponent } from './components/laboratorista/actividades/actividades.component';
-import { HomeComponent } from './components/shared/home/home.component';
 
 
 const routes: Routes = [
@@ -14,6 +18,8 @@ const routes: Routes = [
 
   // Laboratorio
   { path: 'asistencias', component: AsistenciaComponent },
+  { path: 'asistencia-registro', component: RegistroComponent },
+
 
   // Laboratorista
   { path: 'actividades', component: ActividadesComponent },

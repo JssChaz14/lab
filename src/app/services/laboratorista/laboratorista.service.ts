@@ -16,7 +16,7 @@ export class LaboratoristaService {
   }
 
   actividades() {
-    return this.afs.collection('laboratorista').snapshotChanges();
+    return this.afs.collection('asistencias').snapshotChanges();
   }
 
   editarActividad( uid, record ) {

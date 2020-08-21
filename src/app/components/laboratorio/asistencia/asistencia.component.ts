@@ -1,18 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+
+import { LaboratorioService } from '../../../services/laboratorio.service';
+
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-asistencia',
   templateUrl: './asistencia.component.html',
   styleUrls: ['./asistencia.component.css']
 })
+
 export class AsistenciaComponent implements OnInit {
 
-  actividades: Observable<any[]>;
+  asistencias: Observable<any[]>;
 
-  constructor(private afs: AngularFirestore) {
-    this.actividades = afs.collection('asistencias').valueChanges();
+  constructor(private readonly afs: AngularFirestore, private serviceLaboratorio: LaboratorioService) {
+
+    this.asistencias = this.serviceLaboratorio.asistencias().pipe(
+        map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    );
   }
 
   ngOnInit(): void {

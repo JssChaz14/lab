@@ -11,12 +11,12 @@ export class LaboratorioService {
     private afs: AngularFirestore
   ) { }
 
-  registrarEntrada(record) {
+  asistenciaCrear (record) {
     return this.afs.collection('Students').add(record);
   }
 
   asistencias() {
-    return this.afs.collection('Students').snapshotChanges();
+    return this.afs.collection('asistencias').snapshotChanges();
   }
-  
+
 }
