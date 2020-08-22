@@ -1,17 +1,16 @@
 <h2>Registrar entrada</h2>
 <hr>
-<form>
+<form [formGroup]="registroForm" (ngSubmit)="registro()">
     <div class="form-row">
         <div class="form-group col-md-12">
             <label for="ncontrol">Número de control</label>
-            <input type="number" class="form-control" placeholder="Número de control" required>
+            <input type="number" class="form-control" placeholder="Número de control" required formControlName="ncontrol">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputState">Carrera</label>
-            <select id="inputState" class="form-control">
-                <option selected>Carrera</option>
+            <select id="inputState" class="form-control" formControlName="carrera">
                 <option>IGEM</option>
                 <option>IING</option>
                 <option>IIAL</option>
@@ -20,7 +19,7 @@
         </div>
         <div class="form-group col-md-6">
             <label for="inputState">Actividad</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control" formControlName="actividad">
                 <option>Clase</option>
                 <option>Practica</option>
                 <option>Uso general</option>
@@ -32,14 +31,15 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="equipo">Equipo</label>
-            <input type="text" class="form-control" placeholder="Equipo 10">
+            <input type="text" class="form-control" placeholder="Equipo 10" formControlName="equipo">
         </div>
 
         <div class="form-group col-md-6">
             <label for="duracion">Duración <small>min</small></label>
-            <input type="text" class="form-control" placeholder="10 min">
+            <input type="text" class="form-control" placeholder="10 min" formControlName="duracion">
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Registrar</button>
+    <button type="submit" [disabled]="!registroForm.valid" class="btn btn-primary">Registrar</button>
+
 </form>

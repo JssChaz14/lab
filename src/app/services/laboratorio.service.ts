@@ -12,7 +12,9 @@ export class LaboratorioService {
   ) { }
 
   asistenciaCrear (record) {
-    return this.afs.collection('Students').add(record);
+    // return this.afs.collection('Students').add(record);
+    console.log(record);
+    return this.afs.collection('asistencia').doc(record.uid).set(record, { merge: true });
   }
 
   asistencias() {

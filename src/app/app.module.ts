@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AsistenciaComponent } from './components/laboratorio/asistencia/asistencia.component';
 import { RegistroComponent } from './components/laboratorio/registro/registro.component';
@@ -52,6 +53,7 @@ import { MaestrosComponent } from './components/maestros/maestros/maestros.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
